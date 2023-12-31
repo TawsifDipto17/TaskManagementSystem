@@ -1,0 +1,64 @@
+<div class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Add Task</h1>
+   
+  </div>
+  
+  <div class="col py-3">
+    <div class="row">
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+            <li class="breadcrumb-item active">New Task</li>
+          </ol>
+        </nav>
+      </div>
+      
+    </div>
+  
+  </div>
+  
+
+  <form action="/add" method="POST">
+  
+    <div class="row form-group mb-4">
+      <div class="col">
+        <label for="tasktitle">Task Title</label>
+        <input type="text" class="form-control" id="tasktitle" name="tasktitle" value="" placeholder="" required>
+      </div>
+  
+    </div>
+  
+    <div class="row form-group mb-4">
+      <div class="col">
+        <label for="date">Due Date</label>
+        <input type="date" class="form-control" id="date" name="date" value="" placeholder="yyyy-mm-dd" required>
+      </div>
+    </div>
+
+    <div class="row form-group mb-4">
+        <label for="priority">Priority</label><br>
+        <div class="radio-group">
+            <label class="radio-button">
+                <input type="radio" name="priority" value="high"> High
+            </label>
+            <label class="radio-button">
+                <input type="radio" name="priority" value="medium"> Medium
+            </label>
+            <label class="radio-button">
+                <input type="radio" name="priority" value="low"> Low
+            </label>
+        </div>
+    
+    </div>
+    
+    <div class="form-group mb-4">
+        <label for="description">Description</label>
+        <textarea class="form-control" name="description" id="description" cols="30" rows="12" placeholder="" required></textarea>
+    </div>
+  
+    <div class="form-group mb-4">
+      <button type="submit" class="btn btn-primary">Add Task</button>
+    </div>
+  
+  </form>
